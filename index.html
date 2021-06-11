@@ -9,29 +9,21 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style>
-    h2 {color:blue}
-    body { padding-top: 60px; padding-bottom:100px}
-    #aboutme, #education, #employment, #skills, #publications {padding-top: 65px; margin-top: -65px;}
-    nav ul li a {color:white !important; font-size:16px;}
-    nav ul li a:hover {color:black !important;}
-    div ul li a {font-size:18px;}
+    <link rel="stylesheet" type="text/css" href="style_sheet.css">
 
-
-
-</style>
+    
 </head>
 <body>
 
 
 
-   <nav class="navbar navbar-inverse navbar-fixed-top" style="background:green">
+   <nav class="navbar navbar-inverse navbar-fixed-top" >
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#" style="color:white !important">Faith</a>
+                <a class="navbar-brand" href="#">Faith</a>
             </div>
             <ul class="nav navbar-nav">
-                <li ><a href="#aboutme" >About</a> </li>
+                <li ><a href="#aboutme" >About me</a> </li>
                 <li><a href="#education">Education</a> </li>
                 <li><a href="#employment" >Employment</a> </li>
                 <li><a href="#skills">Skills</a> </li>
@@ -49,7 +41,10 @@
 
                 <ul class="nav nav-pills nav-stacked">
                 <li><a href="https://www.linkedin.com/in/faith-wavinya-520a3993/" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a> </li>
+
                 <li><a href="mailto:wavinya.faith@gmail.com" target="_blank"><i class="fa fa-envelope"></i> Email</a> </li>
+
+                <li><a href="https://github.com/" target="_blank"><i class="fa fa-github"></i> Github</a> </li>
                 </ul>
             </div>
 
@@ -58,34 +53,44 @@
             <div class="col-sm-8" >
                 <div id="aboutme">
                     <h2>About me</h2>
-                    <p style="font-size:16px; text-align:justify"> I am a PhD student at Nara Institute of Science and Technology
-                        <a href="https://sociocom.naist.jp/research-en/" target="_blank">(Social Computing Lab)</a>, Japan.
+                    <p > I am a PhD student at Nara Institute of Science and Technology
+                        <a href="https://sociocom.naist.jp/research-en/" target="_blank">Social Computing Laboratory</a>, Japan.
                        <br>
-                        My research interests include medical natural language processing, health informatics, information extraction, machine learning, and deep learning.<br>
-                        My current research is to automate meta-analysis by using natural language processing methods.
-                        Meta-analysis is the process of collecting and analyzing previous studies to ascertain if a treatment is effective or not.
-                        Meta-analysis provide the gold standard for medical evidence. Despite their importance, meta-analyses are time- and cost-consuming and this is
-                        challenging especially in cases where timeliness is important. In my research, I am developing a system for automating meta-analysis,
-                        especially the data extraction and statistical analysis steps.</p>
+                        My research interests include information extraction from biomedical texts
+                        using deep learning techniques.</p>
+                </div>
+
+                <div id="projects">
+                    <h2>Research projects</h2>
+
+                    <h4>Master course research</h4>
+                    <p style="text-decoration: underline;"><i>Semantic Textual Similarity in Clinical Domain Texts Using BERT</i></p>
+                    <p>Semantic Textual Similarity (STS) captures the degree of semantic similarity between texts. It plays an important role in many natural language processing applications such as text summarization, question answering, machine translation, information retrieval, dialog systems, plagiarism detection, and query ranking. STS has been widely studied in the general English domain. However, there exists few resources for STS tasks in the clinical domain. To bridge this gap, a publicly available dataset for Japanese clinical STS was created. The dataset consists of sentence pairs extracted from Japanese case reports and annotated with a semantic similarity scores from 0 (low semantic similarity) to 5 (high semantic similarity). A BERT-based approach was used to capture semantic  similarity between the texts.</p>
+                 
+
+                    <h4>PhD research</h4>
+                    <p style="text-decoration: underline;"><i>Automatic Meta-Analysis System</i></p>
+        
+                     <p>My current research is to automate meta-analysis by using natural language processing methods. Meta-analysis is the process of collecting and analyzing previous studies to ascertain if a treatment is effective or not. Meta-analysis provide the gold standard for medical evidence. Despite their importance, meta-analyses are time- and cost-consuming and this is challenging especially in cases where timeliness is important. In my research, I am developing a system for automating meta-analysis, especially the data extraction and statistical analysis steps.</p>
                 </div>
 
                 <div id="education"  style="text-align:justify">
                     <h2>Education</h2>
 
                     <h4>Nara Institute of Science and Technology (NAIST) (October 2020 - Present)</h4>
-                    <p style="font-size:16px">PhD in Information Science and Engineering</p>
+                    <p>PhD in Information Science and Engineering</p>
 
-                    <br>
+
                     <h4>Nara Institute of Science and Technology (NAIST) (April 2019- September 2020)</h4>
-                    <p style="font-size:16px">Master in Information Science and Engineering</p>
+                    <p >Master in Information Science and Engineering</p>
 
-                    <br>
+                   
                     <h4>Osaka University (April 2017 - March 2019)</h4>
-                    <p style="font-size:16px">Research student</p>
+                    <p >Research student</p>
 
-                    <br>
+                    
                     <h4>Kenyatta University (May 2011 - December 2015)</h4>
-                    <p style="font-size:16px">B.Sc. Telecommunications and Information Technology</p>
+                    <p >B.Sc. Telecommunications and Information Technology</p>
 
                 </div>
 
@@ -94,22 +99,22 @@
                     <h2>Employment</h2>
 
                     <h4>Nara Institute of Science and Technology Social Computing Lab (April 2019 - present)</h4>
-                    <p style="font-size:16px">Research assistant</p>
+                    <p>Research assistant</p>
                    <!--   <ul>
                         <li>Lab research assistant</li>
                     </ul> -->
 
-                    <br>
+                    
                     <h4>MES (UK) Limited, Sesby, Kenya (April 2016 - March 2017)</h4>
-                    <p style="font-size:16px">Support Staff</p>
+                    <p >Support Staff</p>
                     <ul>
-                      
+                    
                         <li>Providing support to production staff in the organization</li>
                     </ul>
 
-                    <br>
+                    
                     <h4>Safaricom Limited, Kenya (October 2015 - Feb 2016)</h4>
-                    <p style="font-size:16px">Business Solutions and Architecture Intern</p>
+                    <p >Business Solutions and Architecture Intern</p>
                     <ul>
                         <li>Designing quality and timely solution designs for internet; E1, MPLS, APN, and VPN</li>
                         <li>Working together with technology professionals to improve on value propositions and solutions</li>
@@ -117,9 +122,9 @@
                     </ul>
 
 
-                    <br>
+                  
                     <h4>Jamii Telecommunications Limited, Kenya (May 2014 - August 2014)</h4>
-                    <p style="font-size:16px">Network Operations Center Intern</p>
+                    <p>Network Operations Center Intern</p>
                     <ul>
                         <li>First line fault detection on the transmission and core network</li>
                         <li>Providing remote support for clients and field technicians</li>
@@ -130,47 +135,48 @@
                     <h2>Skills</h2>
 
 
-
-
                     <h4>Programming Languages</h4>
                     <ul>
-                        <li><p style="font-size:16px">Python (main programming language)</p> </li>
+                        <li><p>Python (main programming language)</p> </li>
                         <ul>
-                            <li><p style="font-size:16px">Natural languguage processing (nltk, spacy, gensim)</p></li>
-                            <li><p style="font-size:16px">Data analysis (pandas, numpy, scipy)</p></li>
-                            <li><p style="font-size:16px">Machine learning (sklearn, keras, pytorch, tensorflow)</p></li>
-                            <li><p style="font-size:16px">Data visualization (matplotlib, seaborn)</p></li>
-                            <li> <p style="font-size:16px">Web applications (flask)</p></li>
+                            <li><p>Natural languguage processing (nltk, spacy, gensim)</p></li>
+                            <li><p>Data analysis (pandas, numpy, scipy)</p></li>
+                            <li><p>Machine learning (sklearn, keras, pytorch, tensorflow)</p></li>
+                            <li><p>Data visualization (matplotlib, seaborn)</p></li>
+                            <li> <p>Web applications (flask)</p></li>
                         </ul>
-                        <li> <p style="font-size:16px">Other programming languages</p></li>
+                        <li> <p>Other programming languages</p></li>
                         <ul>
-                            <li><p style="font-size:16px">R: forest plots, basic statistical tests</p></li>
-                            <li> <p style="font-size:16px">HTML and CSS:  web applications</p> </li>
-                            <li> <p style="font-size:16px">JavaScript: front-end and back-end web programming</p></li>
+                            <li><p>R: forest plots, basic statistical tests</p></li>
+                            <li> <p>HTML and CSS:  web applications</p> </li>
+                            <li> <p>JavaScript: front-end and back-end web programming</p></li>
                         </ul>
 
+                    </ul>
+
+
+
+                    <h4>Volunteer activities</h4>
+                    <ul>
+                    <li><p>Student volunteer at W2GIS 2019,
+                        17th International Symposium on Web and Wireless Geographical Information Systems</p></li>
+
+                    <li>Jan 2020 - Jan 2022: Vice chair NAIST IEEE Student branch</li>
+
+                        <ul>
+                        <li><p>Serve as the junior Executive Officer of the Student Branch</p></li>
+                        <li><p>Chair the Program or Membership Committee</p></li>
+                        <li><p>Monitor the progress of Branch programs</p></li> 
+                        <li><p>Fill in for the Student Branch Chair as required</li>
+                        </ul>
                     </ul>
 
 
                     <h4>Languages</h4>
                     <ul>
-                        <li><p style="font-size:16px">English: native level</p></li>
-                        <li> <p style="font-size:16px">Swahili: native level </p></li>
-                        <li><p style="font-size:16px">Japanese: N2</p></li>
-                    </ul>
-
-
-                    <h4 style="color: blue;">Volunteer activities</h4>
-                    <ul>
-                    <li style="font-size:16px">Student volunteer at W2GIS 2019,
-                        17th International Symposium on Web and Wireless Geographical Information Systems</li>
-
-
-                    <br>
-                    <li style="font-size:16px">Jan 2020 - Jan 2022: Vice chair NAIST IEEE Student branch </li>
-
-                        <p style="font-size:16px">Serve as the junior Executive Officer of the Student Branch, chair the Program or Membership Committee,
-                            monitor the progress of Branch programs, and fill in for the Student Branch Chair as required.</p>
+                        <li><p>English: native level</p></li>
+                        <li> <p>Swahili: native level </p></li>
+                        <li><p>Japanese: N2</p></li>
                     </ul>
 
 
@@ -182,15 +188,13 @@
 
                 
                 <ul>
-                    <li style="font-size:16px"><u>F. W. Mutinda</u>, A. Nakashima, K. Takeuchi, Y. Sasaki and M. Onizuka,
-                        "Time Series Link Prediction Using NMF," 2019 IEEE International Conference
+                    <li><p><u>F. W. Mutinda</u>, A. Nakashima, K. Takeuchi, Y. Sasaki and M. Onizuka,
+                        "Time Series Link Prediction Using NMF," 2019 IEEE International Conference.</p></li>
                
                
-                    <li style="font-size:16px"><u>Mutinda, F.</u>, Nigo, S., Shibata, D., Yada, S., Wakamiya, S., & Aramaki, E. (2020).
-                        Detecting Redundancy in Electronic Medical Records Using Clinical BERT. The Association for Natural Language Processing.</li>
+                    <li><p><u>Mutinda, F.</u>, Nigo, S., Shibata, D., Yada, S., Wakamiya, S., & Aramaki, E. (2020). Detecting Redundancy in Electronic Medical Records Using Clinical BERT. The Association for Natural Language Processing.</p></li>
                
-                    <li style="font-size:16px"><u>Mutinda, F.</u>, Nakashima, A., Takeuchi, K., Sasaki, Y., & Onizuka, M. (2019).
-                        Time Series Link Prediction Using NMF. Journal of Information Processing, 27, 752-761.</li>
+                    <li><p><u>Mutinda, F.</u>, Nakashima, A., Takeuchi, K., Sasaki, Y., & Onizuka, M. (2019). Time Series Link Prediction Using NMF. Journal of Information Processing, 27, 752-761.</p></li>
 
                 </ul>
 
