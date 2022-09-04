@@ -1,0 +1,134 @@
+<! DOCTYPE 	html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Faith Mutinda</title>
+
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+
+    
+   
+
+ 
+    	<link rel="stylesheet" type="text/css" href="style_sheet.css">
+	</head>
+
+	<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<nav class="collapse navbar-collapse bs-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<!-- <li ><a href="#">Faith Mutinda</a></li> -->
+				<!-- <li><a href="index.html">Home</a></li> -->
+				<!-- <li><a href="publications.html">Publications</a></li> -->
+				<li><a href="projects.html">Projects</a></li>
+				<!-- <li><a href="faithCV.pdf" target="_blank">CV</a></li> -->
+
+			</ul>
+		</nav>
+			
+		</div>
+
+
+		
+		<div class="cmed container">
+			<div class="col-sm-1"></div>
+
+			<div class="col-sm-10">
+				<h1>Contextualized medication event extraction</h1>
+
+				<div class="well">
+				<h2>Overview</h2>
+
+				<p>This project outlines participation in the <a href="https://n2c2.dbmi.hms.harvard.edu/2022-track-1" target="_blank">n2c2 2022 shared task (Track 1)</a> on Contextalized Medication Event Extraction (CMED).
+				The track consists of three subtasks:
+				<ol>
+					<li>Named Entity Recognition (NER) - extracting medications/drugs mentions from clinical notes</li>
+					<li>Event Classification - classifying the medication mentions into: 
+
+						<ol type="a">
+							<li>Dispostion (there was medication change discussed)</li>
+							 <li>NoDisposition (there was no medication change discussed)</li>
+							 <li>Undetermined (unclear if a change was discussed).</li>
+							</ol>
+					<li>Context classification - classify the context of Disposition events into: (1) Action (start, stop), (2) Negation, (3) Temporality (past, present), (4) Certainty (hypothetical, conditional), and (5) Actor (patient, physician)</li>
+				</ol></p>
+				<p>Here I will discuss our approach for the subtask 2 on Event classification.</p>
+				</div>
+
+
+					<div class="well">
+				<h2>Approach</h2>
+				<h3>Dataset</h3>
+				
+				<p>
+				 The data is not publicly available due to privacy and confidentiality reasons, but can be requested from the task organizers.
+				</p>
+				<p>The dataset contains clinical notes annotated with <a target="_blank" href="https://brat.nlplab.org/">BRAT web annotation tool</a>.
+				The organizers provided the brat annotated (.ann) files and the clinical notes as text files.</p>
+				
+				<h3>Preprocessing</h3>
+				<p>Each clinical note contains multiple medications, and we have to predict an event class for each medication mention. In the pre-processing, we created multiple sequences/text chunks for each medication mention in the form <i>[context] medication [context]</i>. A window based approach was used to determine the length of the context. 
+				After conducting multiple experiments a window-size of 200 characters achieved the best performance.
+			However, in some cases this window size might not be sufficient to capture the context.
+			The code used for pre-processing the dataset can be found <a href="https://github.com/faith-wm/n2c2_2022_contextualized_medication_extraction" target="_blank">here</a>.</p>
+
+			<h3>Models</h3>
+			<p>We approached this task as a sequence classification task and used the standard BERT model for sequence classification from <a target="_blank" href="https://huggingface.co/docs/transformers/tasks/sequence_classification">  huggingface</a>.
+			The best model was an ensemble of three BERT-based models, i.e., Clinical longformer, BioClinical BERT, and PubMed BERT.
+			Since neural network models provide different results when initialized with different seeds, previous research suggests using different seeds and averaging the results. The code for the models can be found in this <a href="https://github.com/faith-wm/n2c2_2022_contextualized_medication_extraction" target="_blank">Github repository</a>.</p>
+
+			<figure>
+				<img src="figures/bert_class.png">
+			</figure>
+				</div>
+
+
+				<div class="well">
+
+				<h2>References</h2>
+				<ol>
+					<li><a href="https://n2c2.dbmi.hms.harvard.edu/2022-track-1" target="_blank">https://n2c2.dbmi.hms.harvard.edu/2022-track-1</a></li>
+					<li>Mahajan, D., Liang, J.J. and Tsou, C.H., 2020. Toward Understanding Clinical Context of Medication Change Events in Clinical Narratives. arXiv preprint arXiv:2011.08835</li>
+
+					<li>Alsentzer E, Murphy J, Boag W, Weng W-H, Jindi D, Naumann T, et al. Publicly available
+						Clinical BERT embeddings. In: Proceedings of the 2nd Clinical Natural Language Processing
+						Workshop. Minneapolis, Minnesota, USA: ACL; 2019:72–8. [accessed 4 Jun 2020]</li>
+
+					<li> Gu Y, Tinn R, Cheng H, Lucas M, Usuyama N, Liu X, Naumann T, Gao J, Poon H. Domain specific language model pretraining for biomedical natural language processing. ACM
+						Transactions on Computing for Healthcare (HEALTH). 2021 Oct 15;3(1):1-23</li>
+
+						
+
+								<li>Li Y, Wehbe RM, Ahmad FS, Wang H, Luo Y. Clinical-Longformer and Clinical-BigBird: transformers for long clinical sequences. arXiv preprint arXiv:2201.11838. 2022 Jan 27</li>
+				</ol>
+			</div>
+
+				
+
+			</div>
+
+
+
+			
+
+			<div class="col-sm-1"></div>
+		</div>
+		
+	
+
+		
+			
+<footer class="footer">2022 &copy;  Faith</footer>
+
+
+
+	</body>
+	</html>

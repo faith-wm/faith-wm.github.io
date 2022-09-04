@@ -1,32 +1,41 @@
+body {font-family: Cambria, Georgia, serif;line-height: 180%; font-size: 170%;}
+
+.navbar {background-color: grey; padding-top: 1%;padding-bottom: 1%;padding-left: 20%;font-size: 150%;}
+nav ul li a {color: white !important;font-size: 90%; font-family: Comic Sans Ms;}
+nav ul li a:hover{color: blue !important;}
+
+a.active {color: blue !important;}
 
 
 
-body {padding-bottom:10%; font-family:Arial, Helvetica, sans-serif;font-size: 180%; }
+.main{margin-top: 10%;}
+.contact li a{padding-right: 0.2em; }
+.bname {text-align:center;font-size: 130%;font-family: Copperplate; line-height: 80%;padding-top: 1%;}
 
-#aboutme, #education, #employment, #skills, #publications {padding-top: 65px; margin-top: -65px;}
-
-#aboutme {padding-top: 15%;}
-
-img {margin-top: 100px;}
-
-nav ul li a {color:white !important; font-size:180%;}
-
-nav ul li a:hover {color:black !important;}
-
-div ul li a {font-size:110%;}
-
-h2 {color:blue}
-
-h4 {font-weight: 600; margin-top: 4%;}
-
-p {text-align: justify;}
+.about{text-align: justify; padding-top: 1%;}
 
 
+.publ {margin-top:5%;}
+.publ li:not(:last-child) {margin-bottom: 2%; }
+.publ li{font-size:100%;}
+.publ h2{padding-top: 2%;}
 
 
+.proj {margin-top:6%;}
+.proj p, li{font-family: Geneva; font-size: 90%;}
 
 
+.autometa {margin-top:6%; margin-bottom: 10%;}
+.autometa p, li{font-family: Geneva; font-size: 90%;}
 
 
+.cmed {margin-top:6%; margin-bottom: 10%;}
+.cmed p, li{font-family: Geneva; font-size: 90%;}
 
 
+.sts {margin-top:6%;margin-bottom: 10%;}
+
+h1,h2,h3,h4{font-family: Copperplate; color: #0F0495;}
+
+.footer {position: fixed; left: 0; bottom: 0; width: 100%; text-align: center; background-color: #FEFBFA; 
+		height: 5%;	}

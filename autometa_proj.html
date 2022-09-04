@@ -1,0 +1,150 @@
+<! DOCTYPE 	html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Faith Mutinda</title>
+
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+
+    
+   
+
+ 
+    	<link rel="stylesheet" type="text/css" href="style_sheet.css">
+	</head>
+
+	<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<nav class="collapse navbar-collapse bs-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<!-- <li ><a href="#">Faith Mutinda</a></li> -->
+				<!-- <li><a href="index.html">Home</a></li> -->
+				<!-- <li><a href="publications.html">Publications</a></li> -->
+				<li><a href="projects.html">Projects</a></li>
+				<!-- <li><a href="faithCV.pdf" target="_blank">CV</a></li> -->
+
+			</ul>
+		</nav>
+			
+		</div>
+
+
+		
+		<div class="autometa container">
+			<div class="col-sm-1"></div>
+
+			<div class="col-sm-10">
+				<h2>Automatic Data Extraction to Support Meta-Analysis Statistical Analysis</h2>
+
+				<div class="well">
+				<h3>Overview</h3>
+				<p>A meta-analysis is a statistical analysis that combines results of different studies that are focussed on the same disease or treatment to ascertain if a treatment is effective or not.
+				For instance, if we want to determine if treatment X cures a certain disease/condition Y, we can (1) conduct a clinical trial, or (2) conduct a meta-analysis.
+				Although clinical trials provide gold standard evidence, they are time consuming and expensive. 
+				Meta-analyses are therefore an alternative to clinical trials.</p>
+
+				<p>Meta-analysis involves extracting data from existing clinical trials reserch publications and combining the results to determine if the treatment is effective or not.
+
+				However, the number of research publications is increasing rapidly and more articles are being published everyday.
+				In this research, we propose a system that automatically extracts information from research publications.
+				The system has the benefit of reducing the time taken in reading research articles to extract information.
+				</p>
+
+
+				<figure>
+				<img style="border: 2px solid black;" width="100%" height="28%" src="figures/autometa_proj.png">
+				<figcaption>Fig. 1: What is a meta-analysis</figcaption>
+			</figure>
+
+			</div>
+
+				<div class="well">
+
+				<h3>Dataset</h3>
+				<p>We created a corpus consisting of abstracts of breast cancer randomized controlled trials (RCTs) extracted from the PubMed database.
+				We annotate the core components of clinical trials, i.e., Participants (P), Intervention (I), Control (C), and Outcome (O), commonly known as the PICO elements.
+				For each component we annotate text snippets that describe them.</p>
+				<ul>
+					<li> Participants: we annotate the total number of participants, the number of participants in the intervention group, the number of participants in the control group, eligibility, age, condition, age, ethnicity, and location.</li>
+					<li>Intervention and Control: we annotate the intervention and control treatments.</li>
+					<li>Outcome: we annotate the outcomes that were measured, outcome measure, and number of participants that experienced an outcome. </li>
+				</ul>
+				<p>The abstracts were annotated using <a target="_blank" href="https://brat.nlplab.org/">BRAT web annotation tool</a>. Fig. 2 shows a sample abstract annotated in BRAT.
+				The annotated data can be freely downloaded <a target="_blank" href="https://github.com/sociocom/PICO-Corpus">here</a>. For detailed information on the annotation guidelines and entities please read our <a target="_blank" href="https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-022-01897-4">Paper</a>.</p>
+
+				<figure>
+					<img style="border: 2px solid black;" width="100%" height="35%" src="figures/annotated_abs.png">
+					<figcaption>Fig. 2: Sample BRAT annotated abstract.  Abstract source: https://pubmed.ncbi.nlm.nih.gov/12439707/</figcaption>
+				</figure>
+				</div>
+
+
+				<div class="well">
+				<h3>Approach</h3>
+				<h4>Pre-processing</h4>
+				<ul>
+					<li>Convert BRAT annotated texts to BIO format and save in csv format. The codes for converting from BRAT format to BIO can be found at this <a href="https://github.com/faith-wm/automatic_data_extraction_for_metaAnalysis" target="_blank">Github repository</a></li>
+					<li>Acronym expansion. Research articles use acronyms to avoid repeating long terms and save space. In this research we identify acronyms by looking for terms in parenthesis that are between two and ten characters and use regular expresions to find expansion candidates in the sorrounding text. The code for acronym expansion can be found at <a href="https://github.com/faith-wm/automatic_data_extraction_for_metaAnalysis" target="_blank">Github repository</a>.</li>
+				</ul>
+				<h4>Models</h4>
+				<p>The information extraction is a named entity recognition (NER) task.
+				We train three BERT-based NER models; BioBERT, BlueBERT, and Longformer.
+				We use the standard BERT-based models for token classification as provided by <a target="_blank" href="https://huggingface.co/docs/transformers/tasks/token_classification">huggingface</a>.
+		
+				Since neural network models provide different results when initialized with different seeds, previous research suggests using different seeds and averaging the results. 
+				The code for token classification using BERT models can be found <a target="_blank" href="https://github.com/faith-wm/automatic_data_extraction_for_metaAnalysis">here</a>.</p>
+
+				<figure>
+					<img style="border: 2px solid black;" width="" height="" src="figures/bert_ner.png">
+					<figcaption>Fig.3: BERT NER Model</figcaption>
+				</figure>
+
+
+
+			<!-- 	<h4>Data normalization</h4>
+				<p>Meta-analysis involves combining similar studies to assess the effectiveness of the intervention (treatment). 
+				To automatically group similar studies together and compare them within a meta-study, it is necessary to normalize the extracted PICO elements. 
+				We focus on the normalization of the intervention, control, and outcome elements.</p> cancer patients.
+
+				<p>For intervention and control, we use UMLS since it comprehensively covers</p> -->
+				
+				</div>
+
+
+					<div class="well">
+				<h3>Paper</h3>
+
+				<p>Please read our <a target="_blank" href="https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-022-01897-4">paper</a> for more details on this project.<br>
+				Also check out our <a target="_blank" href="https://aoi.naist.jp/autometa-demo-v2/">NER demo website</a> and <a target="_blank" href="https://aoi.naist.jp/autometavisualization/">meta-analysis results visualization system</a>.</p>
+			</div>
+		
+
+				
+				
+
+			</div>
+
+
+
+			
+
+			<div class="col-sm-1"></div>
+		</div>
+		
+	
+
+		<footer class="footer">2022 &copy;  Faith</footer>
+			
+
+
+
+	</body>
+	</html>

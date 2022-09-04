@@ -1,264 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Faith_Resume</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<! DOCTYPE 	html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Faith Mutinda</title>
 
-    <link rel="stylesheet" type="text/css" href="style_sheet.css">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
 
     
-</head>
-<body>
+   
+
+ 
+    	<link rel="stylesheet" type="text/css" href="style_sheet.css">
+	</head>
+
+	<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<nav class="collapse navbar-collapse bs-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li ><a href="#">Faith Mutinda</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="publications.html">Publications</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="faithCV.pdf" target="_blank">CV</a></li>
+
+			</ul>
+		</nav>
+			
+		</div>
 
 
+		
+		<div class="main container">
+			<div class="col-sm-1"></div>
 
-   <!-- <nav class="navbar navbar-inverse navbar-fixed-top" >
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Faith</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li ><a href="#aboutme" >About me</a> </li>
-                <li><a href="#education">Education</a> </li>
-                <li><a href="#employment" >Employment</a> </li>
-                <li><a href="#skills">Skills</a> </li>
-                <li><a href="#publications" >Publications</a> </li>
-                </ul>
-        </div>
-    </nav> -->
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-       
-    </div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#aboutme" >About me</a>
-        </li>
-            <li>
-            <a href="#education">Education</a>
-          </li>
-        <li>
-          <a href="#employment" >Employment</a> 
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#publications">Publications</a>
-        </li>
-      </ul>
-       
-    </nav>
-  </div>
-</div>
+			<div class="bio col-sm-5">
+				<img class="img-rounded" width="80%" height="40%" alt="Cinque Terre"  src="figures/faceP.jpg">
+				<div class="bname">
+				<p>Faith W. Mutinda</p>
+				<p >Ph.D. Student </p>
+				<p><a target="_blank" href="https://sociocom.naist.jp/research-en/"> Nara Institute of Science and Technology,
+				Social computing Lab.</a> </p></div>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <img class="img-rounded" alt="Cinque Terre" width="250" height="200" src="faithimg.jpg" >
+				<ul class="contact nav nav-pills">
 
-                <ul class="nav nav-pills nav-stacked">
+					<li><a href="mailto:wavinya.faith@gmail.com" target="_blank"><i class="fa fa-envelope"></i> Email</a> </li>
+
                 <li><a href="https://www.linkedin.com/in/faith-wavinya-520a3993/" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a> </li>
 
-                <li><a href="mailto:wavinya.faith@gmail.com" target="_blank"><i class="fa fa-envelope"></i> Email</a> </li>
+                
 
                 <li><a href="https://github.com/faith-wm" target="_blank"><i class="fa fa-github"></i> Github</a> </li>
-                </ul>
-            </div>
 
-
-
-            <div class="col-sm-8" >
-                <div id="aboutme">
-                    <h2>About me</h2>
-                    <p > I am a PhD student at Nara Institute of Science and Technology
-                        <a href="https://sociocom.naist.jp/research-en/" target="_blank">Social Computing Laboratory</a>, Japan.
-                       <br>
-                        My research interests include information extraction from biomedical texts
-                        using machine learning and deep learning techniques.</p>
-                </div>
-
-                <div id="projects">
-                    <h2>Research projects</h2>
-
-                    <h4>Master course research</h4>
-                    <p style="text-decoration: underline;"><i>Semantic Textual Similarity in Clinical Domain Texts Using BERT</i></p>
-                    <p>Semantic Textual Similarity (STS) captures the degree of semantic similarity between texts. It plays an important role in many natural language processing applications such as text summarization, question answering, machine translation, information retrieval, dialog systems, plagiarism detection, and query ranking. STS has been widely studied in the general English domain. However, there exists few resources for STS tasks in the clinical domain. To bridge this gap, a publicly available dataset for Japanese clinical STS was created. The dataset consists of sentence pairs extracted from Japanese case reports and annotated with a semantic similarity scores from 0 (low semantic similarity) to 5 (high semantic similarity). A BERT-based approach was used to capture semantic  similarity between the texts.</p>
-                 
-
-                    <h4>PhD research</h4>
-                    <p style="text-decoration: underline;"><i>Automatic Meta-Analysis System</i></p>
-        
-                     <p>My current research is to automate meta-analysis by using natural language processing methods. Meta-analysis is the process of collecting and analyzing previous studies to ascertain if a treatment is effective or not. Meta-analysis provide the gold standard for medical evidence. Despite their importance, meta-analyses are time- and cost-consuming and this is challenging especially in cases where timeliness is important. In my research, I am developing a system for automating meta-analysis, especially the data extraction and statistical analysis steps.</p>
-                </div>
-
-                <div id="education"  style="text-align:justify">
-                    <h2>Education</h2>
-
-                    <h4>Nara Institute of Science and Technology (NAIST) (October 2020 - April 2023 (expected))</h4>
-                    <p>PhD in Information Science and Engineering</p>
-
-
-                    <h4>Nara Institute of Science and Technology (NAIST) (April 2019- September 2020)</h4>
-                    <p >Master in Information Science and Engineering</p>
-
-                   
-                    <h4>Osaka University (April 2017 - March 2019)</h4>
-                    <p >Research student</p>
-
-                    
-                    <h4>Kenyatta University (May 2011 - December 2015)</h4>
-                    <p >B.Sc. Telecommunications and Information Technology</p>
-
-                </div>
-
-
-                <div id="employment">
-                    <h2>Employment</h2>
-
-                    <h4>Nara Institute of Science and Technology Social Computing Lab (April 2019 - present)</h4>
-                    <p>Research assistant</p>
-                   <!--   <ul>
-                        <li>Lab research assistant</li>
-                    </ul> -->
-
-                    
-                    <h4>MES (UK) Limited, Sesby, Kenya (April 2016 - March 2017)</h4>
-                    <p >Support Staff</p>
-                    <ul>
-                    
-                        <li>Providing support to production staff in the organization</li>
-                    </ul>
-
-                    
-                    <h4>Safaricom Limited, Kenya (October 2015 - Feb 2016)</h4>
-                    <p >Business Solutions and Architecture Intern</p>
-                    <ul>
-                        <li>Designing quality and timely solution designs for internet; E1, MPLS, APN, and VPN</li>
-                        <li>Working together with technology professionals to improve on value propositions and solutions</li>
-                        <li>Preparing competitive business and technical proposals for customers</li>
-                    </ul>
-
-
-                  
-                    <h4>Jamii Telecommunications Limited, Kenya (May 2014 - August 2014)</h4>
-                    <p>Network Operations Center Intern</p>
-                    <ul>
-                        <li>First line fault detection on the transmission and core network</li>
-                        <li>Providing remote support for clients and field technicians</li>
-                    </ul>
-                </div>
-
-                <div id="skills">
-                    <h2>Skills</h2>
-
-
-                    <h4>Programming Languages</h4>
-                    <ul>
-                        <li><p>Python (main programming language)</p> </li>
-                        <ul>
-                            <li><p>Natural language processing (nltk, spacy, gensim)</p></li>
-                            <li><p>Data analysis (pandas, numpy, scipy)</p></li>
-                            <li><p>Machine learning (sklearn, keras, pytorch, tensorflow)</p></li>
-                            <li><p>Data visualization (matplotlib, seaborn)</p></li>
-                            <li> <p>Web applications (flask)</p></li>
-                        </ul>
-                        <li> <p>Other programming languages</p></li>
-                        <ul>
-                            <li><p>R: forest plots, basic statistical tests</p></li>
-                            <li> <p>HTML and CSS:  web applications</p> </li>
-                            <li> <p>JavaScript: front-end and back-end web programming</p></li>
-                        </ul>
-
-                    </ul>
-
-
-
-                    <h4>Volunteer activities</h4>
-                    <ul>
-                    <li><p>Student volunteer at W2GIS 2019,
-                        17th International Symposium on Web and Wireless Geographical Information Systems</p></li>
-
-                    <li>Jan 2020 - Jan 2022: Vice chair NAIST IEEE Student branch</li>
-
-                        <ul>
-                        <li><p>Serve as the junior Executive Officer of the Student Branch</p></li>
-                        <li><p>Chair the Program or Membership Committee</p></li>
-                        <li><p>Monitor the progress of Branch programs</p></li> 
-                        <li><p>Fill in for the Student Branch Chair as required</li>
-                        </ul>
-                    </ul>
-
-
-                    <h4>Languages</h4>
-                    <ul>
-                        <li><p>English: native level</p></li>
-                        <li> <p>Swahili: native level </p></li>
-                        <li><p>Japanese: N2</p></li>
-                    </ul>
-
-                </div>
-
-
-                <div id="awards">
-                    <h2>Awards and certifications</h2>
-                    <ul>
-                        <li><p>Recipient of the Japanese Government (MEXT) Scholarship in 2017, 2019, and 2020</p></li>
-                        <li><p>IBM Application Security Analyst - Mastery Award for Students 2016</p></li>
-                        <li><p>Cisco Certified Network Associate Routing and Switching, 2014</p></li>
-                    </ul>
-                    
-                </div>
-
-
-
-                <div id="publications">
-                    <h2>Publications</h2>
-
-                
-                <ul>
-                    
-                    
-                    <li><p><u>Mutinda, F. W.</u>,Yada, S., Wakamiya, S., & Aramaki, E. (2021). 
-                        Semantic Textual Similarity in Japanese Clinical Domain Texts Using BERT. Methods of Information in Medicine.</p></li>
-                    
-                    
-                    <li><p><u>F. W. Mutinda</u>, A. Nakashima, K. Takeuchi, Y. Sasaki and M. Onizuka,
-                        "Time Series Link Prediction Using NMF," 2019 IEEE International Conference.</p></li>
-               
-               
-                    <li><p><u>Mutinda, F.</u>, Nigo, S., Shibata, D., Yada, S., Wakamiya, S., & Aramaki, E. (2020). Detecting Redundancy in Electronic Medical Records Using Clinical BERT. The Association for Natural Language Processing.</p></li>
-               
-                    <li><p><u>Mutinda, F.</u>, Nakashima, A., Takeuchi, K., Sasaki, Y., & Onizuka, M. (2019). Time Series Link Prediction Using NMF. Journal of Information Processing, 27, 752-761.</p></li>
-                    
-                    
+                <li><a href="https://scholar.google.com/citations?user=l3cc_GQAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar-square"></i> Google Scholar</a> </li>
 
                 </ul>
 
-                </div>
-
-
-            </div>
-
-        </div>
-    </div>
+			</div>
 
 
 
-</body>
-</html>
+			<div class="about col-sm-5">
+				<h2>About Me</h2>
+				<p>I'm a Ph.D. student in the Social Computing Laboratory in Nara Institute of Science and Technology, Japan. 
+				My current research is automatic information extraction from biomedical texts by leveraging natural language processing, machine learning, and deep learning techniques. </p>
+				
+				<h3>Interests</h3>
+				<ul>
+					<li>Machine Learning</li>
+					<li>Deep Learning</li>
+					<li>Natural Language Processing</li>
+					<li>Data Science</li>
+				</ul>
+
+
+
+			</div>
+
+			<div class="col-sm-1"></div>
+		</div>
+		
+	
+
+		
+			<footer class="footer">2022 &copy;  Faith</footer>
+
+
+
+
+	</body>
+	</html>

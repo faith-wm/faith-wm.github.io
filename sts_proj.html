@@ -1,0 +1,112 @@
+<! DOCTYPE 	html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Faith Mutinda</title>
+
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+
+    
+   
+
+ 
+    	<link rel="stylesheet" type="text/css" href="style_sheet.css">
+	</head>
+
+	<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<nav class="collapse navbar-collapse bs-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<!-- <li ><a href="#">Faith Mutinda</a></li> -->
+				<!-- <li><a href="#">Home</a></li> -->
+				<!-- <li><a href="publications.html">Publications</a></li> -->
+				<li><a href="projects.html">Projects</a></li>
+				<!-- <li><a href="faithCV.pdf" target="_blank">CV</a></li> -->
+
+			</ul>
+		</nav>
+			
+		</div>
+
+
+		
+		<div class="sts container">
+			<div class="col-sm-1"></div>
+
+			<div class="col-sm-10">
+				<h1>Semantic textual similarity in clinical domain texts</h1>
+
+				<div class="well">
+				<h2>Overview</h2>
+				<p>Semantic Textual Similarity (STS) captures the degree of semantic similarity between texts. It plays an important role in many natural language processing applications such as text summarization, question answering, machine translation, information retrieval, dialog systems, plagiarism detection, and query ranking.</p>
+				<p>In this project, we calculate semantic similarity between clinical domain sentence pairs, and assign them semantic similarity scores from 0 (low semantic similarity) to 5 (high semantic similarity).</p>
+
+				<figure>
+					<img style="border: 1px solid black;" src="figures/sts-ex.png">
+				</figure>
+			</div>
+
+				<div class="well">
+
+				<h2>Approach</h2>
+
+				<h3>Dataset</h3>
+
+				<p>The datasets consist of sentence pairs annotated with a semantic similarity from 0 (low semantic similarity) to 5 (high semantic similarity).
+					This task uses three datasets; one English dataset, and two Japanese datasets. 
+					One of the Japanese datasets is publicly available and can be freely downloaded from <a target="_blank" href="https://github.com/sociocom/Japanese-Clinical-STS">here</a>.
+					This dataset was created from sentences extracted from case reports publications extracted from the CiNii database.
+					The rest of the datasets (English and Japanese) cannot be shared publicly because they were created from Electronic Medical Records (EMR).</p>
+
+					<h3>Models</h3>
+					The task can be treated as a regression model (continuous scores between 0 and 5) or sequence classification task with 6 classes (discrete scores [0,1,2,3,4,5]).
+					<p>We used Clinical BERT model for the English dataset. 
+					For the Japanese models we used Japanese BERT and Clinical Japanese BERT models. The codes for the BERT regression and sequence classification models can be found in this <a href="https://github.com/faith-wm/Clinical-domain-semantic-textual-similarity" target="_blank">Github repository</a>.</p>
+
+
+
+					<figure>
+						<img style="border: 1px solid black;" src="figures/bert_sts.png">
+					</figure>
+
+				</div>
+				
+
+				<div class="well">
+			<h2>Paper</h2>
+			<p>For detailed information on the corpus and models read our papers below.</p>
+			<ol>
+				<li><a target="_blank" href="https://www.thieme-connect.com/products/ejournals/html/10.1055/s-0041-1731390">Semantic Textual Similarity in Japanese Clinical Domain Texts Using BERT</a></li>
+
+				<li><a target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=l3cc_GQAAAAJ&sortby=pubdate&citation_for_view=l3cc_GQAAAAJ:d1gkVwhDpl0C">Detecting Redundancy in Electronic Medical Records Using Clinical BERT</a></li>
+			</ol>
+		</div>
+			</div>
+
+			
+
+
+
+			
+
+			<div class="col-sm-1"></div>
+		</div>
+		
+	<footer class="footer">2022 &copy;  Faith</footer>
+
+		
+			
+
+
+
+
+	</body>
+	</html>
